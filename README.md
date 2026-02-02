@@ -8,11 +8,11 @@
 
 [Jiaqi Yang](https://jqyang22.github.io/)<sup>a</sup>, [Kyle Kabasares](https://www.kylekabasares.com/)<sup>b, c</sup>, [Ming Liu](https://pages.cs.wisc.edu/~mgliu/)<sup>d</sup>, [Taejin Park](nasa.gov/people/taejin-park/)<sup>b, c</sup>, [Min Chen](https://globalchange.cals.wisc.edu/staff/chen-min/)<sup>a, e ∗</sup>
 
-<sup>1</sup> Department of Forest and Wildlife Ecology, University of Wisconsin-Madison, Madison, WI, USA, 
-<sup>2</sup> Bay Area Environmental Research Institute, Moffett Field, CA, 94035, USA,
-<sup>3</sup> NASA Ames Research Center, Moffett Field, CA, 94035, USA, 
-<sup>4</sup> Department of Computer Sciences, University of Wisconsin-Madison, 1210 W. Dayton Street, Madison, WI, 53706, USA, 
-<sup>5</sup> Data Science Institute, University of Wisconsin-Madison, 447 Lorch Ct, Madison 53706 WI, USA.
+<sup>a</sup> Department of Forest and Wildlife Ecology, University of Wisconsin-Madison, Madison, WI, USA, 
+<sup>b</sup> Bay Area Environmental Research Institute, Moffett Field, CA, 94035, USA,
+<sup>c</sup> NASA Ames Research Center, Moffett Field, CA, 94035, USA, 
+<sup>d</sup> Department of Computer Sciences, University of Wisconsin-Madison, 1210 W. Dayton Street, Madison, WI, 53706, USA, 
+<sup>e</sup> Data Science Institute, University of Wisconsin-Madison, 447 Lorch Ct, Madison 53706 WI, USA.
 
 <sup>*</sup> Corresponding author
 
@@ -21,18 +21,7 @@
 <div align="center">
 
 <p align='center'>
-  <a href="https://whu-sigma.github.io/HyperSIGMA/"><img alt="Project" src="https://img.shields.io/badge/Project-Page-375BD2?style=for-the-badge" /></a>
-  <a href="https://arxiv.org/abs/2406.11519"><img alt="Paper" src="https://img.shields.io/badge/arXiv-2406.11519-92003B?style=for-the-badge" /></a>
   <a href="https://ieeexplore.ieee.org/document/10949864"><img alt="Pape" src="https://img.shields.io/badge/TPAMI-Paper-6D4AFF?style=for-the-badge" /></a>
-  <a href="#"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/WHU-Sigma/HyperSIGMA?style=for-the-badge" /></a>
-  <a href="#"><img alt="Maintenance" src="https://img.shields.io/badge/Maintaining-YES-93b023?&style=for-the-badge" /></a>
-</p>
-
-
-<p align='center'>
-  <a href="https://huggingface.co/WHU-Sigma/HyperSIGMA/tree/main"><img alt="HuggingFace" src="https://img.shields.io/badge/-HuggingFace-FDEE21?style=for-the-badge&logo=HuggingFace&logoColor=black" /></a>
-  <a href="https://github.com/WHU-Sigma/HyperSIGMA/#-pretrained-models"><img alt="Baidu Drive" src="https://img.shields.io/badge/-Baidu%20Drive-87CEEB?style=for-the-badge&logo=Baidu&logoColor=black" /></a>
-  <a href="https://mp.weixin.qq.com/s/dsUYTbZKfYBGmC4mju0zPg"><img alt="Wechat" src="https://img.shields.io/badge/WeChat%20article-07C160?style=for-the-badge&logo=wechat&logoColor=white" /></a>
 </p>
 
 
@@ -60,7 +49,7 @@
 
 
 
-# 🔥 Update
+<!-- # 🔥 Update
 
 **2025.11.24**
 
@@ -95,14 +84,11 @@
 
 **2024.06.18**
 - The paper is post on arXiv! **([arXiv 2406.11519](https://arxiv.org/abs/2406.11519))** 
+ -->
 
+# 🌳 Overview
 
-# 🌞 Overview
-
-**HyperSIGMA** is the first billion-level foundation model specifically designed for HSI interpretation. To tackle the
-spectral and spatial redundancy challenges in HSIs, we introduce a novel sparse sampling attention (SSA) mechanism, which effectively
-promotes the learning of diverse contextual features and serves as the basic block of HyperSIGMA. HyperSIGMA integrates spatial and
-spectral features using a specially designed spectral enhancement module.</a>
+Accurate delineation of individual tree crowns is essential for forest inventory, ecosystem monitoring, and climate-informed management. However, most existing deep learning approaches rely on scene-specific annotations that are costly to produce and difficult to generalize across heterogeneous regions and image resolutions. To tackle these challenges, we propose **UniTree**, a unified framework that enables cross-region and cross-resolution individual tree crown segmentation without scene-specific annotation.</a>
 
 
 <figure>
