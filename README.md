@@ -88,17 +88,31 @@
 
 # 🌳 Overview
 
-Accurate delineation of individual tree crowns is essential for forest inventory, ecosystem monitoring, and climate-informed management. However, most existing deep learning approaches rely on scene-specific annotations that are costly to produce and difficult to generalize across heterogeneous regions and image resolutions. To tackle these challenges, we propose **UniTree**, a unified framework that enables cross-region and cross-resolution individual tree crown segmentation without scene-specific annotation.</a>
+Accurate delineation of individual tree crowns is essential for forest inventory, ecosystem monitoring, and climate-informed management. However, most existing deep learning approaches rely on scene-specific annotations that are costly to produce and difficult to generalize across heterogeneous regions and image resolutions.</a>
 
 
 <figure>
 <div align="center">
-<img src=Fig/framework.png width="80%">
+<img src=Fig/Challenges.bmp width="80%">
 </div>
 
 <div align='center'>
  
-**Figure 1. Framework of UniTree.**
+**Figure 1. Challenges of individual tree segmentation.**
+
+</div>
+<br>
+
+To tackle these challenges, we propose **UniTree**, a unified framework that enables cross-region and cross-resolution individual tree crown segmentation without scene-specific annotation.</a>
+
+<figure>
+<div align="center">
+<img src=Fig/Overall_pipeline.bmp width="80%">
+</div>
+
+<div align='center'>
+ 
+**Figure 2. Framework of UniTree.**
 
 </div>
 <br>
