@@ -26,12 +26,12 @@
 
 
 <p align="center">
-  <a href="#-update">Update</a> |
   <a href="#-overview">Overview</a> |
-  <a href="#-datasets">Datasets</a> |
-  <a href="#-pretrained-models">Pretrained Models</a> |
+  <a href="#-study-areas">Study areas</a> |
+  <a href="#-citation">Citation</a> |
   <a href="#-usage">Usage</a> |
   <a href="#-statement">Statement</a>
+  <a href="#-acknowledgement">Acknowledgement</a>
 </p >
 </div>
 
@@ -111,6 +111,7 @@ To tackle these challenges, we propose **UniTree**, a unified framework that ena
 
 </div>
 <br>
+
 
 # 🌍 Study areas
 There are two distinct study areas in our study: [Denmark](https://sid.erda.dk/share_redirect/eFt21tspNe/denmark/extracted_data_train_patch_normalized_updated.zip) as the source domain and [Yosemite National Park](https://naip-usdaonline.hub.arcgis.com/) as the target domain.
