@@ -40,11 +40,11 @@
   <a href="#-statement">Statement</a>
 </p >
 
-<figure>
+<!-- <figure>
 <div align="center">
 <img src=Fig/logo1.png width="20%">
 </div>
-</figure>
+</figure> -->
 
 
 
@@ -98,7 +98,7 @@ Accurate delineation of individual tree crowns is essential for forest inventory
 
 <div align='center'>
  
-**Figure 1. Framework of HyperSIGMA.**
+**Figure 1. Framework of UniTree.**
 
 </div>
 <br>
