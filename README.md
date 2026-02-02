@@ -206,7 +206,7 @@ If you find UniTree helpful, please give a ⭐ and cite it as follows:
 
 # 📒 Statement
 
-For any other questions please contact Jiaqi Yang at [jiaqi.yang@wisc.edu](mailto:jiaqi.yang@wisc.edu) or Min Chen at [min.chen@wisc.edu](mailto:min.chen@wisc.edu).
+For any other questions, please contact Jiaqi Yang at [jiaqi.yang@wisc.edu](mailto:jiaqi.yang@wisc.edu) or Min Chen at [min.chen@wisc.edu](mailto:min.chen@wisc.edu).
 
 
 # 💖 Acknowledgement
