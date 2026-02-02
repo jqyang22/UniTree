@@ -33,6 +33,7 @@
   <a href="#-usage">Usage</a> |
   <a href="#-statement">Statement</a>
 </p >
+</div>
 
 <!-- <figure>
 <div align="center">
@@ -112,7 +113,6 @@ To tackle these challenges, we propose **UniTree**, a unified framework that ena
 <br>
 
 # 🌍 Study areas
-To train the foundational model, we collected hyperspectral remote sensing image samples from around the globe, constructing a large-scale hyperspectral dataset named **HyperGlobal-450K** for pre-training. **[HyperGlobal-450K](https://huggingface.co/datasets/WHU-Sigma/HyperGlobal-450K)** contains over 20 million three-band images, far exceeding the scale of existing hyperspectral datasets.
 There are two distinct study areas in our study: [Denmark](https://sid.erda.dk/share_redirect/eFt21tspNe/denmark/extracted_data_train_patch_normalized_updated.zip) as the source domain and [Yosemite National Park](https://naip-usdaonline.hub.arcgis.com/) as the target domain.
 
 <figure>
