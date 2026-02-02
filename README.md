@@ -21,15 +21,9 @@
 <div align="center">
 
 <p align='center'>
-  <a href=""><img alt="Pape" src="https://img.shields.io/badge/TPAMI-Paper-6D4AFF?style=for-the-badge" /></a>
+  <a href="ieeexplore.ieee.org/abstract/document/9321744"><img alt="Pape" src="https://img.shields.io/badge/RSE-Paper-6D4AFF?style=for-the-badge" /></a>
 </p>
 
-
-<!-- [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Farxiv.org%2Fabs%2F2406.11519&count_bg=%23FF0000&title_bg=%23555555&icon=arxiv.svg&icon_color=%23E7E7E7&title=Arxiv+Preprint&edge_flat=false)](https://arxiv.org/abs/2406.11519)
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%2FtYqe95Ip-fRBM57F2F5rvw&count_bg=%2311B36B&title_bg=%23555555&icon=wechat.svg&icon_color=%23E7E7E7&title=Wechat&edge_flat=false)](https://mp.weixin.qq.com/s/tYqe95Ip-fRBM57F2F5rvw)
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FWHU-Sigma%2FHyperSIGMA&count_bg=%2379C83D&title_bg=%23555555&icon=github.svg&icon_color=%23E7E7E7&title=Github&edge_flat=false)](https://github.com/WHU-Sigma/HyperSIGMA)
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fhuggingface.co%2FWHU-Sigma&count_bg=%23684BD3&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=%F0%9F%A4%97%20Hugging%20Face&edge_flat=false)](https://huggingface.co/WHU-Sigma/HyperSIGMA/tree/main) -->
-</div>
 
 <p align="center">
   <a href="#-update">Update</a> |
@@ -117,30 +111,19 @@ To tackle these challenges, we propose **UniTree**, a unified framework that ena
 </div>
 <br>
 
-
-Extensive experiments on various high-level and low-level HSI tasks demonstrate HyperSIGMA’s versatility and superior representational capability compared to current state-of-the-art methods. It outperforms advanced models like SpectralGPT, even those specifically designed for these tasks.
-
-<figure>
-<div align="center">
-<img src=Fig/radarimg.png width="80%">
-</div>
-</figure>
-
-**Figure 2. HyperSIGMA demonstrates superior performance across 16 datasets and 7 tasks, including both high-level and low-level hyperspectral tasks, as well as multispectral scenes.** 
-
-
-
-# 📖 Datasets
+# 🌍 Study areas
 To train the foundational model, we collected hyperspectral remote sensing image samples from around the globe, constructing a large-scale hyperspectral dataset named **HyperGlobal-450K** for pre-training. **[HyperGlobal-450K](https://huggingface.co/datasets/WHU-Sigma/HyperGlobal-450K)** contains over 20 million three-band images, far exceeding the scale of existing hyperspectral datasets.
+There are two distinct study areas in our study: [Denmark](https://sid.erda.dk/share_redirect/eFt21tspNe/denmark/extracted_data_train_patch_normalized_updated.zip) as the source domain and [Yosemite National Park](https://naip-usdaonline.hub.arcgis.com/) as the target domain.
 
 <figure>
 <div align="center">
-<img src=Fig/dataset.png width="80%">
+<img src=Fig/Yosemite_national_park.bmp width="80%">
 </div>
 </figure>
 
-**Figure 3. The distribution of HyperGlobal-450K samples across the globe, comprising 1,701 images (1,486 EO-1 and 215 GF-5B) with hundreds of spectral bands.**
+**Figure 3. Test areas and target domains in Yosemite National Park.**
 
+<!--
 # 🚀 Pretrained Models
 
 | Pretrain | Backbone | Model Weights |
@@ -151,44 +134,23 @@ To train the foundational model, we collected hyperspectral remote sensing image
 | Spectral_MAE | ViT-B |  [Baidu Drive](https://pan.baidu.com/s/1VinBf4qnN98aa6z7TZ-ENQ?pwd=mi2y) & [Hugging Face](https://huggingface.co/WHU-Sigma/HyperSIGMA/blob/main/spec-vit-base-ultra-checkpoint-1599.pth)|
 | Spectral_MAE | ViT-L | [Baidu Drive](https://pan.baidu.com/s/1tF2rG-T_65QA3UaG4K9Lhg?pwd=xvdd) & [Hugging Face](https://huggingface.co/WHU-Sigma/HyperSIGMA/blob/main/spec-vit-large-ultra-checkpoint-1599.pth)| 
 | Spectral_MAE | ViT-H |  [Baidu Drive](https://pan.baidu.com/s/1Di9ffWuzxPZUagBCU4Px2w?pwd=bi9r) & [Hugging Face](https://huggingface.co/WHU-Sigma/HyperSIGMA/blob/main/spec-vit-huge-ultra-checkpoint-1599.pth) |
+-->
 
 
 
 # 🔨 Usage
 
-## Pretraining
+## Train the model from scratch
 
-We pretrain the HyperSIGMA with SLURM. This is an example of pretraining the large version of Spatial ViT:
-
-```
-srun -J spatmae -p xahdnormal --gres=dcu:4 --ntasks=64 --ntasks-per-node=4 --cpus-per-task=8 --kill-on-bad-exit=1 \
-python main_pretrain_Spat.py \
---model 'spat_mae_l' --norm_pix_loss \
---data_path [pretrain data path] \
---output_dir [model saved patch] \
---log_dir [log saved path] \
---blr 1.5e-4 --batch_size 32 --gpu_num 64 --port 60001
-```
-
-Another example of pretraining the huge version of Spectral ViT:
+--- 🔖 Set configs ---
+config/Preprocessing.py
 
 ```
-srun -J specmae -p xahdnormal --gres=dcu:4 --ntasks=128 --ntasks-per-node=4 --cpus-per-task=8 --kill-on-bad-exit=1 \
-python main_pretrain_Spec.py \
---model 'spec_mae_h' --norm_pix_loss \
---data_path [pretrain data path] \
---output_dir [model saved patch] \
---log_dir [log saved path] \
---blr 1.5e-4 --batch_size 16 --gpu_num 128 --port 60004  --epochs 1600 --mask_ratio 0.75 \
---use_ckpt 'True'
+python main1-2_segcount_transfer_learning.py
 ```
 
-The training can be recovered by setting `--resume`
 
-```
---resume [path of saved model]
-```
-
+<!--
 ## Finetuning
 
 ***Image Classification***: 
@@ -207,25 +169,13 @@ Please refer to [ChangeDetection-README](https://github.com/WHU-Sigma/HyperSIGMA
 ***Spectral Unmixing***: 
 
 Please refer to [HyperspectralUnmixing-README](https://github.com/WHU-Sigma/HyperSIGMA/blob/main/HyperspectralUnmixing).
+-->
 
 
-***Denoising***: 
-
-Please refer to [Denoising-README](https://github.com/WHU-Sigma/HyperSIGMA/tree/main/ImageDenoising).
-
-
-***Super-Resolution***: 
-
-Please refer to [SR-README](https://github.com/WHU-Sigma/HyperSIGMA/tree/main/ImageSuperResolution).
-
-
-***Multispectral Change Detection***: 
-
-Please refer to [MultispectralCD-README](https://github.com/WHU-Sigma/HyperSIGMA/tree/main/MultispectralCD).
-
+<!--
 # ⭐ Citation
 
-If you find our HyperSIGMA helpful, please give a ⭐ and cite it as follows:
+If you find UniTree helpful, please give a ⭐ and cite it as follows:
 
 ```
 @ARTICLE{hypersigma,
@@ -240,15 +190,18 @@ If you find our HyperSIGMA helpful, please give a ⭐ and cite it as follows:
   doi={10.1109/TPAMI.2025.3557581}
 }
 ```
+-->
 
-# 🎺 Statement
+# 🗒️ Statement
 
-For any other questions please contact di.wang at [gmail.com](mailto:wd74108520@gmail.com) or [whu.edu.cn](mailto:d_wang@whu.edu.cn), and chengxi.han at [whu.edu.cn](mailto:chengxihan@whu.edu.cn).
+For any other questions please contact Jiaqi Yang at [jiaqi.yang@wisc.edu](mailto:jiaqi.yang@wisc.edu) or Min Chen at [min.chen@wisc.edu](mailto:min.chen@wisc.edu).
 
 
-# 💖 Thanks
-This project is based on [MMCV](https://github.com/open-mmlab/mmcv), [MAE](https://github.com/facebookresearch/mae), [Swin Transformer](https://github.com/microsoft/Swin-Transformer), [VSA](https://github.com/ViTAE-Transformer/ViTAE-VSA), [RVSA](https://github.com/ViTAE-Transformer/Remote-Sensing-RVSA), [DAT](https://github.com/LeapLabTHU/DAT), [HTD-IRN](https://github.com/shendb2022/HTD-IRN), [GT-HAD](https://github.com/jeline0110/GT-HAD), [MSDformer](https://github.com/Tomchenshi/MSDformer), [SST-Former](https://github.com/yanhengwang-heu/IEEE_TGRS_SSTFormer), [SST](https://github.com/MyuLi/SST), [CNNAEU](https://ieeexplore.ieee.org/document/9096565) and [DeepTrans](https://github.com/preetam22n/DeepTrans-HSU). Thanks for their wonderful work!<br>
+# 💖 Acknowledgement
+The source-domain data is generated from [TreeCountSegHeight](https://github.com/sizhuoli/TreeCountSegHeight?tab=readme-ov-file). Thanks for their wonderful work!<br>
 
+<!--
 <img src="https://visitor-badge.laobi.icu/badge?page_id=WHU-Sigma.HyperSIGMA&left_color=%2363C7E6&right_color=%23CEE75F">
 
 [![Star History Chart](https://api.star-history.com/svg?repos=WHU-Sigma/HyperSIGMA&type=Date)](https://star-history.com/#WHU-Sigma/HyperSIGMA&Date)
+-->
