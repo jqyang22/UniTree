@@ -147,6 +147,11 @@ There are two distinct study areas in our study: [Denmark](https://sid.erda.dk/s
 
 # 🔨 Usage
 
+<!--
+## Requirements
+Python 3.9.20 and more in [environment.yml](environment.yml)
+-->
+
 ## Train the model from scratch
 
 --- 🔖 Set configs ---
