@@ -30,16 +30,18 @@
   <a href="#-study-areas">Study areas</a> |
   <a href="#-citation">Citation</a> |
   <a href="#-usage">Usage</a> |
-  <a href="#-statement">Statement</a>
+  <a href="#-statement">Statement</a> |
   <a href="#-acknowledgement">Acknowledgement</a>
 </p >
 </div>
 
-<!-- <figure>
+<!-- 
+<figure>
 <div align="center">
 <img src=Fig/logo1.png width="20%">
 </div>
-</figure> -->
+</figure>
+-->
 
 
 
@@ -122,7 +124,11 @@ There are two distinct study areas in our study: [Denmark](https://sid.erda.dk/s
 </div>
 </figure>
 
+<div align='center'>
+ 
 **Figure 3. Test areas and target domains in Yosemite National Park.**
+
+</div>
 
 <!--
 # 🚀 Pretrained Models
