@@ -3,9 +3,7 @@
 
 <h1>Unified Knowledge Transfer Boost Individual Tree Crown Segmentation without Scene-specific Labels</h1>
 
-<h2>Under Review</h2>
-<h2>(The code will be made publicly available upon publication. For early access, please feel free to reach out.)</h2>
-
+<h2>Remote Sensing of Environment (RSE)</h2>
 
 [Jiaqi Yang](https://jqyang22.github.io/)<sup>a</sup>, [Kyle Kabasares](https://www.kylekabasares.com/)<sup>b, c</sup>, [Ming Liu](https://pages.cs.wisc.edu/~mgliu/)<sup>d</sup>, [Taejin Park](https://www.nasa.gov/people/taejin-park/)<sup>b, c</sup>, [Min Chen](https://globalchange.cals.wisc.edu/staff/chen-min/)<sup>a, e ∗</sup>
 
@@ -21,9 +19,9 @@
 
 <div align="center">
 
-<!-- <p align='center'>
-  <a href="ieeexplore.ieee.org/abstract/document/9321744"><img alt="Pape" src="https://img.shields.io/badge/RSE-Paper-6D4AFF?style=for-the-badge" /></a>
-</p> -->
+<p align='center'>
+  <a href="https://doi.org/10.1016/j.rse.2026.115646"><img alt="Pape" src="https://img.shields.io/badge/RSE-Paper-6D4AFF?style=for-the-badge" /></a>
+</p>
 
 
 <p align="center">
@@ -35,15 +33,6 @@
   <a href="#-acknowledgement">Acknowledgement</a>
 </p >
 </div>
-
-<!-- 
-<figure>
-<div align="center">
-<img src=Fig/logo1.png width="20%">
-</div>
-</figure>
--->
-
 
 
 # 🌳 Overview
@@ -97,30 +86,85 @@ Denmark data can be download from [Denmark](https://sid.erda.dk/share_redirect/e
 
 # 🔨 Usage
 
-<!--
 ## Requirements
-Python 3.9.20 and more in [environment.yml](environment.yml)
--->
+Python 3.9 and more in [environment.yml](environment.yml)
 
-## Train the model from scratch
+## Clone this repository and set environment
+git clone https://github.com/jqyang22/UniTree.git
+conda env create -f environment.yml
+conda activate py39
 
+Please replace all file and directory paths with your local paths before running the code.
+
+## Prepare your own data
+**Source domain (labelled).** One flat folder. Each training frame is a set of single-band rasters that
+share the same grid, named `<layer>_<id>.png`:
+
+| layer | dtype | content |
+|---|---|---|
+| `red_<id>`, `green_<id>`, `blue_<id>`, `infrared_<id>` | float32 | image bands, already standardised per band (the training config runs with `normalize = 0`, so no normalisation is applied) |
+| `annotation_<id>` | int16 | binary crown mask, {0, 1} |
+| `boundary_<id>` | int16 | binary crown-boundary mask, {0, 1} |
+| `ann_kernel_<id>` | float32 | Gaussian density map |
+
+Frames are discovered by listing the files that start with `channel_names[0]`, so every frame needs all
+seven layers. For three-band imagery, set `channel_names = ['red', 'green', 'blue']` in the training config.
+
+**Target domain (unlabelled).** Same folder convention. Target imagery is what defines the domain you want to transfer to.
+
+**Tiles for inference.** Georeferenced GeoTIFF, bands ordered as in `config.channels`,
+about 0.6 m ground sampling distance.
+
+**Reference data for evaluation.** A crown-polygon shapefile plus a rectangle shapefile delimiting the
+annotated area.
+
+## 1. Train the model
 --- 🔖 Set configs ---
-config/Preprocessing.py
+config/UniTreeTraining.py
 
 ```
-python main1-2_segcount_transfer_learning.py
+python main1_train.py
+```
+
+## 2. Inference on new data
+--- 🔖 Set configs ---
+config/RasterAnalysis.py
+
+```
+python main2_infer.py
+```
+
+## 3. Evaluate
+--- 🔖 Set configs ---
+config/RasterAnalysis.py
+
+```
+python main3_eval.py \
+    --pred  data/test_pred/<tile>_seg.tif \
+    --label data/test/<tile>/lbl/<tile>_seg_polygon.shp \
+    --rect  data/test/<tile>/lbl/<tile>_seg_rectangle.shp
 ```
 
 
-<!--
+
 # ⭐ Citation
 
 If you find UniTree helpful, please give a ⭐ and cite it as follows:
 
 ```
-
+@article{Yang2026Unified,
+  title     = {Unified knowledge transfer boosts individual tree crown segmentation without scene-specific labels},
+  author    = {Yang, Jiaqi and Kabasares, Kyle and Liu, Ming and Park, Taejin and Chen, Min},
+  journal   = {Remote Sensing of Environment},
+  volume    = {347},
+  pages     = {115646},
+  year      = {2026},
+  issn      = {0034-4257},
+  doi       = {10.1016/j.rse.2026.115646},
+  publisher = {Elsevier}
+}
 ```
--->
+
 
 # 📒 Statement
 
@@ -129,9 +173,3 @@ For any other questions, please contact Jiaqi Yang at [jiaqi.yang@wisc.edu](mail
 
 # 💖 Acknowledgement
 The source-domain Denmark data is generated from [TreeCountSegHeight](https://github.com/sizhuoli/TreeCountSegHeight?tab=readme-ov-file). Thanks for their wonderful work!<br>
-
-<!--
-<img src="https://visitor-badge.laobi.icu/badge?page_id=WHU-Sigma.HyperSIGMA&left_color=%2363C7E6&right_color=%23CEE75F">
-
-[![Star History Chart](https://api.star-history.com/svg?repos=WHU-Sigma/HyperSIGMA&type=Date)](https://star-history.com/#WHU-Sigma/HyperSIGMA&Date)
--->
