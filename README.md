@@ -3,7 +3,7 @@
 
 <h1>Unified Knowledge Transfer Boost Individual Tree Crown Segmentation without Scene-specific Labels</h1>
 
-<h2>Remote Sensing of Environment (RSE)</h2>
+<h2><em>Remote Sensing of Environment (RSE)</em></h2>
 
 [Jiaqi Yang](https://jqyang22.github.io/)<sup>a</sup>, [Kyle Kabasares](https://www.kylekabasares.com/)<sup>b, c</sup>, [Ming Liu](https://pages.cs.wisc.edu/~mgliu/)<sup>d</sup>, [Taejin Park](https://www.nasa.gov/people/taejin-park/)<sup>b, c</sup>, [Min Chen](https://globalchange.cals.wisc.edu/staff/chen-min/)<sup>a, e ∗</sup>
 
@@ -147,8 +147,9 @@ python main3_eval.py \
 
 
 
-# ⭐ Citation
+# ⭐ Reference
 
+For any questions, please feel free to reach me at [jiaqi.yang@wisc.edu](mailto:jiaqi.yang@wisc.edu)
 If you find UniTree helpful, please give a ⭐ and cite it as follows:
 
 ```
@@ -166,9 +167,10 @@ If you find UniTree helpful, please give a ⭐ and cite it as follows:
 ```
 
 
-# 📒 Statement
+# 📒 Contact
 
-For any other questions, please contact Jiaqi Yang at [jiaqi.yang@wisc.edu](mailto:jiaqi.yang@wisc.edu) or Min Chen at [min.chen@wisc.edu](mailto:min.chen@wisc.edu).
+Jiaqi Yang: [jiaqi.yang@wisc.edu](mailto:jiaqi.yang@wisc.edu)
+Min Chen: [min.chen@wisc.edu](mailto:min.chen@wisc.edu).
 
 
 # 💖 Acknowledgement
