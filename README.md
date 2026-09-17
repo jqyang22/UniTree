@@ -79,7 +79,9 @@ To tackle these challenges, we propose **UniTree**, a unified framework that ena
 
 
 # 🌍 Study areas
-There are two distinct study areas in our study: [Denmark](https://sid.erda.dk/share_redirect/eFt21tspNe/denmark/extracted_data_train_patch_normalized_updated.zip) as the source domain and [Yosemite National Park](https://naip-usdaonline.hub.arcgis.com/) as the target domain.
+There are two distinct study areas in our study: Denmark as the source domain and Yosemite National Park as the target domain.
+
+Denmark data can be download from [Denmark](https://sid.erda.dk/share_redirect/eFt21tspNe/denmark/extracted_data_train_patch_normalized_updated.zip). Yosemite National Park data are extracted from [NAIP imagery](https://naip-usdaonline.hub.arcgis.com/).
 
 <figure>
 <div align="center">
@@ -126,7 +128,7 @@ For any other questions, please contact Jiaqi Yang at [jiaqi.yang@wisc.edu](mail
 
 
 # 💖 Acknowledgement
-The source-domain data is generated from [TreeCountSegHeight](https://github.com/sizhuoli/TreeCountSegHeight?tab=readme-ov-file). Thanks for their wonderful work!<br>
+The source-domain Denmark data is generated from [TreeCountSegHeight](https://github.com/sizhuoli/TreeCountSegHeight?tab=readme-ov-file). Thanks for their wonderful work!<br>
 
 <!--
 <img src="https://visitor-badge.laobi.icu/badge?page_id=WHU-Sigma.HyperSIGMA&left_color=%2363C7E6&right_color=%23CEE75F">
