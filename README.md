@@ -126,7 +126,7 @@ annotated area.
 
 ## 1. Train the model
 * Set configs <br>
-[config/UniTreeTraining.py] (config/UniTreeTraining.py)
+[config/UniTreeTraining.py](config/UniTreeTraining.py)
 * Run
 ```
 python main1_train.py
@@ -134,7 +134,7 @@ python main1_train.py
 
 ## 2. Inference on new data
 * Set configs <br>
-[config/RasterAnalysis.py] (config/RasterAnalysis.py)
+[config/RasterAnalysis.py](config/RasterAnalysis.py)
 * Run
 ```
 python main2_infer.py
@@ -142,7 +142,7 @@ python main2_infer.py
 
 ## 3. Evaluate
 * Set configs <br>
-[config/RasterAnalysis.py] (config/RasterAnalysis.py)
+[config/RasterAnalysis.py](config/RasterAnalysis.py)
 * Run
 ```
 python main3_eval.py \
