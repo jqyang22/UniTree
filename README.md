@@ -158,7 +158,7 @@ For any questions, please feel free to reach me at [jiaqi.yang@wisc.edu](mailto:
 If you find UniTree helpful, please give a ⭐ and cite it as follows:
 
 ```
-@article{Yang2026Unified,
+@article{UniTree,
   title     = {Unified knowledge transfer boosts individual tree crown segmentation without scene-specific labels},
   author    = {Yang, Jiaqi and Kabasares, Kyle and Liu, Ming and Park, Taejin and Chen, Min},
   journal   = {Remote Sensing of Environment},
