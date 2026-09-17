@@ -1,7 +1,7 @@
 
 <div align="center">
 
-<h1>Unified Knowledge Transfer Boost Individual Tree Crown Segmentation without Scene-specific Labels</h1>
+<h1>Unified Knowledge Transfer Boosts Individual Tree Crown Segmentation without Scene-specific Labels</h1>
 
 <h2><em>Remote Sensing of Environment (RSE)</em></h2>
 
@@ -27,9 +27,9 @@
 <p align="center">
   <a href="#-overview">Overview</a> |
   <a href="#-study-areas">Study areas</a> |
-  <!-- <a href="#-citation">Citation</a> | -->
+  <a href="#-reference">Reference</a> |
   <a href="#-usage">Usage</a> |
-  <a href="#-statement">Statement</a> |
+  <a href="#-contact">Contact</a> |
   <a href="#-acknowledgement">Acknowledgement</a>
 </p >
 </div>
@@ -84,17 +84,21 @@ Denmark data can be download from [Denmark](https://sid.erda.dk/share_redirect/e
 
 </div>
 
+
 # 🔨 Usage
 
 ## Requirements
 Python 3.9 and more in [environment.yml](environment.yml)
 
-## Clone this repository and set environment
+* Clone this repository and set environment
+
+```
 git clone https://github.com/jqyang22/UniTree.git
 conda env create -f environment.yml
 conda activate py39
+```
 
-Please replace all file and directory paths with your local paths before running the code.
+* Please replace all file and directory paths with your local paths before running the code.
 
 ## Prepare your own data
 **Source domain (labelled).** One flat folder. Each training frame is a set of single-band rasters that
@@ -119,32 +123,31 @@ about 0.6 m ground sampling distance.
 annotated area.
 
 ## 1. Train the model
---- 🔖 Set configs ---
+* Set configs <br>
 config/UniTreeTraining.py
-
+* Run
 ```
 python main1_train.py
 ```
 
 ## 2. Inference on new data
---- 🔖 Set configs ---
+* Set configs <br>
 config/RasterAnalysis.py
-
+* Run
 ```
 python main2_infer.py
 ```
 
 ## 3. Evaluate
---- 🔖 Set configs ---
+* Set configs <br>
 config/RasterAnalysis.py
-
+* Run
 ```
 python main3_eval.py \
     --pred  data/test_pred/<tile>_seg.tif \
     --label data/test/<tile>/lbl/<tile>_seg_polygon.shp \
     --rect  data/test/<tile>/lbl/<tile>_seg_rectangle.shp
 ```
-
 
 
 # ⭐ Reference
