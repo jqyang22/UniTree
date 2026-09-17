@@ -174,8 +174,8 @@ If you find UniTree helpful, please give a ⭐ and cite it as follows:
 
 # 📒 Contact
 
-Jiaqi Yang: [jiaqi.yang@wisc.edu](mailto:jiaqi.yang@wisc.edu) <br>.
-Min Chen: [min.chen@wisc.edu](mailto:min.chen@wisc.edu).
+Jiaqi Yang: [jiaqi.yang@wisc.edu](mailto:jiaqi.yang@wisc.edu) <br>
+Min Chen: [min.chen@wisc.edu](mailto:min.chen@wisc.edu)
 
 
 # 💖 Acknowledgement
