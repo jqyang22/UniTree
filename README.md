@@ -20,7 +20,9 @@
 <div align="center">
 
 <p align='center'>
-  <a href="https://doi.org/10.1016/j.rse.2026.115646"><img alt="Pape" src="https://img.shields.io/badge/RSE-Paper-6D4AFF?style=for-the-badge" /></a>
+<a href="https://doi.org/10.1016/j.rse.2026.115646">
+  <img alt="Paper" src="https://img.shields.io/badge/RSE-Paper-orange?style=for-the-badge" />
+</a>
 </p>
 
 
@@ -124,7 +126,7 @@ annotated area.
 
 ## 1. Train the model
 * Set configs <br>
-config/UniTreeTraining.py
+[config/UniTreeTraining.py] (config/UniTreeTraining.py)
 * Run
 ```
 python main1_train.py
@@ -132,7 +134,7 @@ python main1_train.py
 
 ## 2. Inference on new data
 * Set configs <br>
-config/RasterAnalysis.py
+[config/RasterAnalysis.py] (config/RasterAnalysis.py)
 * Run
 ```
 python main2_infer.py
@@ -140,7 +142,7 @@ python main2_infer.py
 
 ## 3. Evaluate
 * Set configs <br>
-config/RasterAnalysis.py
+[config/RasterAnalysis.py] (config/RasterAnalysis.py)
 * Run
 ```
 python main3_eval.py \
