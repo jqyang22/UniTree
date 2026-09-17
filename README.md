@@ -29,8 +29,8 @@
 <p align="center">
   <a href="#-overview">Overview</a> |
   <a href="#-study-areas">Study areas</a> |
-  <a href="#-reference">Reference</a> |
   <a href="#-usage">Usage</a> |
+  <a href="#-reference">Reference</a> |
   <a href="#-contact">Contact</a> |
   <a href="#-acknowledgement">Acknowledgement</a>
 </p >
